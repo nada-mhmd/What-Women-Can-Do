@@ -1,0 +1,125 @@
+
+
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Login and Registration </title>
+
+      <link rel="stylesheet" href="stylelogin.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   <body>
+      <script>
+         function addData(){
+         var mail =document.getElementById('mail').value;
+         var pass =document.getElementById('pass').value;
+
+         localStorage.setItem('usermail',mail);
+         localStorage.setItem('userpas',pass);}
+      
+      function checkdata(e){
+         var entemail = document.getElementById('email').value;
+         var entpass = document.getElementById('pwd').value;
+
+         var getemail=localStorage.getItem('usermail');
+         var getpass =localStorage.getItem('userpas');
+         if(entemail != getemail && entpass != getpass)
+         {
+            alert("invalid datalais");
+         }
+            
+            else
+            {
+               alert("login sucessful");
+               window.location.replace("home.html");
+            }
+            
+      }
+      </script>
+      <div class="wrapper">
+         <div class="title-text">
+            <div class="title login">
+               Login Form
+            </div>
+            <div class="title signup">
+               Signup Form
+            </div>
+         </div>
+         <div class="form-container">
+            <div class="slide-controls">
+               <input type="radio" name="slide" id="login" checked>
+               <input type="radio" name="slide" id="signup">
+               <label for="login" class="slide login">Login</label>
+               <label for="signup" class="slide signup">Signup</label>
+               <div class="slider-tab"></div>
+            </div>
+            <div class="form-inner">
+               <form action="home.html" class="login">
+                  <div class="field">
+                     <input type="email" id="email"  placeholder="Email Address" required>
+                  </div>
+                  <div class="field">
+                     <input type="password" id="pwd" placeholder="Password" minlength="8" maxlength="16" required>
+                  </div>
+                  
+                  <div class="field btn">
+                     <div class="btn-layer"></div>
+                     <input type="submit" value="Login"  onclick="checkdata()">
+                  </div>
+                  <div class="signup-link">
+                     Not a member? <a href="">Signup now</a><br>
+                     <a href="log.html">Admin</a>
+                  </div>
+               </form>
+               <form  autocomplete="off" class="signup">
+                  <div class="field">
+                     <input type="email" id="mail" placeholder="Email Address" required>
+                  </div>
+                  <div class="field">
+                     <input type="password" id="pass" placeholder="Password"  minlength="8" maxlength="16" required>
+                  </div>
+                  <div class="field">
+                     <input type="number" id="ag" placeholder="age" min="10" max="90" required>
+                  </div>
+                  <div class="field btn">
+                     <div class="btn-layer"></div>
+                     <input type="submit" value="Signup" onclick="addData()">
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+      
+      
+      <script>
+         const loginText = document.querySelector(".title-text .login");
+         const loginForm = document.querySelector("form.login");
+         const loginBtn = document.querySelector("label.login");
+         const signupBtn = document.querySelector("label.signup");
+         const signupLink = document.querySelector("form .signup-link a");
+         const layer = document.querySelector("form .btn-layer");
+         signupBtn.onclick = (()=>{
+           loginForm.style.marginLeft = "-50%";
+           loginText.style.marginLeft = "-50%";
+         });
+         loginBtn.onclick = (()=>{
+           loginForm.style.marginLeft = "0%";
+           loginText.style.marginLeft = "0%";
+         });
+         signupLink.onclick = (()=>{
+           signupBtn.click();
+           return false;
+           
+         });
+         layer.onclick = (()=>{
+           signupBtn.click();
+           return false;
+           
+         });
+         </script>
+         
+ 
+        </body>
+</html>

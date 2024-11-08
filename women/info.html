@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>info</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="info.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  </head>
+  <body>
+   
+    <div class="sidebar">
+      <div class="logoContent">
+          <div class="logo">
+            <i class='bx bxl-wordpress'></i>
+              <div class="logoName">What Women Can Do</div>
+          </div>
+          <!-- logo -->
+          <i class='bx bx-menu' id="btn"></i>
+      </div>
+      <!-- logoContent -->
+      <ul class="nav_list">
+
+        <li>
+          <a href="home.html">
+              <i class='bx bx-home' ></i>
+              <span class="links_name">Home</span>
+              <span class="toolipe">Home</span>
+          </a>
+      </li>
+      <li>
+        <a href="team.html">
+          <i class='bx bxs-user-account'></i>
+            <span class="links_name">Team</span>
+            <span class="toolipe">Team</span>
+        </a>
+    </li>
+
+    
+
+    <li>
+        <a href="info.html">
+          <i class='bx bx-mail-send'></i>
+            <span class="links_name">ContactUs</span>
+            <span class="toolipe">ContactUs</span>
+        </a>
+    </li>
+
+
+          <li>
+            <a href="content.html">
+              <i class='bx bxl-wordpress'></i>
+                <span class="links_name">  Content</span>
+                <span class="toolipe">Content</span>
+            </a>
+        </li>
+          
+
+          <li>
+              <a href="n.html">
+                  <i class='bx bx-log-out' ></i>
+                  <span class="links_name">  LogOut</span>
+                  <span class="toolipe">LogOut</span>
+              </a>
+          </li>
+          
+          <li>
+            <a href="">
+              <i class='bx bxl-facebook-circle'></i>
+                <span class="links_name">  FaceBook</span>
+                <span class="toolipe">FaceBook</span>
+            </a>
+        </li>
+        
+        <li>
+          <a href="">
+            <i class='bx bxl-instagram'></i>
+              <span class="links_name">  Instagram</span>
+              <span class="toolipe">Instagram</span>
+          </a>
+      </li>
+      
+      <li>
+        <a href="">
+          <i class='bx bxl-twitter'></i>
+            <span class="links_name">  Twitter</span>
+            <span class="toolipe">Twitter</span>
+        </a>
+    </li>
+     </ul>
+      <!-- nav_list -->
+      <!-- profileContent -->
+  </div>
+  <!-- sidebar -->
+
+
+  <script>
+      // variáveis
+      const btn = document.querySelector('#btn');
+      const bxSearch = document.querySelector('.bx-search');
+      const sidebar = document.querySelector('.sidebar');
+      const home = document.querySelector('.homeContent');
+
+      // Eventos de escuta do click
+      btn.addEventListener('click',()=>{
+          sidebar.classList.toggle('active');
+          home.classList.toggle('active');
+      });
+
+      bxSearch.addEventListener('click',()=>{
+          sidebar.classList.toggle('active');
+          home.classList.toggle('active');
+      });
+  </script>
+
+    <div class="contact-info">
+      <div class="card">
+        <i class="card-icon far fa-envelope"></i>
+        <p>nadamohsen809@gmail.com</p>
+      </div>
+
+      <div class="card">
+        <i class="card-icon fas fa-phone"></i>
+        <p>+075879898977</p>
+      </div>
+
+      <div class="card">
+        <i class="card-icon fas fa-map-marker-alt"></i>
+        <p> fcis ain shams university</p>
+      </div>
+    </div>
+  </body>
+</html>

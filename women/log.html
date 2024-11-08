@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN PASSWORD VALIDATION | PRAROZ TUTORIAL</title>
+
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+    <div class="form">
+        <h1>LOGIN HERE</h1>
+        <p>Username :</p>
+        <input type="text" name="" placeholder="Name Here" id="name">
+        <p>Password :</p>
+        <input type="password" name="" placeholder="Password Here" id="pass">
+        
+        <input type="submit" name="" value="LOGIN" onclick="validate()">
+        <div class="signup-link">
+            <a href="index.html">User</a>
+         </div>
+    </div>
+
+
+<script>
+    function validate(){
+    var password = document.getElementById("pass");
+    var mail =document.getElementById("name");
+
+    if(password.value == 12345678  ){
+        {
+        alert("Login Succesfull");
+        window.location.replace("adminpage.html");
+        return false;}
+    }
+    else{
+        alert("Login Failed");
+    }
+}
+</script>
+   
+</body>
+</html>
+
+
+
+
+
